@@ -157,6 +157,28 @@ body{color:#f7fbff;-webkit-font-smoothing:antialiased;text-rendering:optimizeLeg
  .option{font-size:16px}
  .school-name .brand{font-size:12px;line-height:1.5}
 }
+
+/* High-visibility countdown timer */
+.exam-top .pill.timer{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:142px;min-height:66px;padding:10px 22px;
+  border:3px solid #ffe36e;border-radius:18px;
+  background:linear-gradient(135deg,#092b50 0%,#064b70 100%);
+  color:#fff36b;font-size:clamp(34px,4vw,44px);font-weight:1000;
+  line-height:1;letter-spacing:2px;font-variant-numeric:tabular-nums;
+  text-shadow:0 0 12px #ffe45e,0 2px 3px #00152b;
+  box-shadow:0 0 0 4px #ffe36e24,0 7px 22px #001a3c88,inset 0 0 14px #6deaff25;
+}
+.exam-top .pill.timer.urgent{
+  color:#fff;background:linear-gradient(135deg,#a90020 0%,#ed263f 100%);
+  border-color:#fff1f2;text-shadow:0 0 14px #fff;
+  box-shadow:0 0 0 5px #ff354533,0 0 26px #ff3545aa;
+  animation:pulse .55s infinite alternate;
+}
+@media(max-width:620px){
+  .exam-top .pill.timer{min-width:128px;min-height:60px;padding:9px 18px;font-size:36px;border-width:3px;border-radius:16px}
+}
+
 </style>
 </head>
 <body>
