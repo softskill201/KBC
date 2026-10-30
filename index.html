@@ -103,6 +103,24 @@ footer{color:#9eb4d6}footer strong{color:#ffe5a0}
 #welcome .orbit-one{top:-150px;left:-120px;box-shadow:0 0 0 22px #6ccfff08,0 0 0 45px #6ccfff06}
 #welcome .orbit-two{right:-150px;bottom:-160px;box-shadow:0 0 0 22px #ffd76a08,0 0 0 45px #ffd76a05}
 @media(max-width:620px){#welcome .welcome-panel{min-height:0;padding:30px 16px 26px}#welcome .kbc-emblem{width:78px;height:78px}#welcome .welcome-kicker{letter-spacing:1.4px}#welcome .welcome-facts{gap:8px 10px;font-size:11px}#welcome .welcome-facts i{width:4px;height:4px}}
+
+/* Colourful welcome-page polish + readable creator credit */
+.creator-footer{font-size:12px!important;letter-spacing:1.2px;color:#b9d9f7;padding:16px 10px 22px;text-shadow:0 0 12px #39c5ff55}
+.creator-footer strong{font-size:12px!important;color:#ffe18a;font-weight:900;letter-spacing:1.8px;text-shadow:0 0 13px #ffd76a99}
+#welcome .welcome-panel{border:2px solid transparent;background:linear-gradient(145deg,#09264a 0%,#102d58 38%,#24194f 72%,#071a38 100%) padding-box,linear-gradient(120deg,#54e4ff,#ffe17a,#ff78c8,#8c8aff,#54e4ff) border-box;box-shadow:0 0 0 6px #51cfff16,0 22px 80px #000b,0 0 45px #2a9ee655,inset 0 0 55px #a24cff18}
+#welcome .welcome-panel:before{border:1px solid #ffffff42;box-shadow:inset 0 0 25px #62dfff12}
+#welcome .welcome-kicker{color:#8cecff;text-shadow:0 0 15px #35cfff99}
+#welcome .welcome-label{color:#fff0b8;border-color:#ffd76a99;background:linear-gradient(90deg,#ffb84d22,#d86bff22,#36d9ff22);box-shadow:0 0 18px #9d6bff22}
+#welcome .hero-title{background:linear-gradient(90deg,#fff7d4 0%,#ffe078 30%,#ffb5e8 65%,#8deaff 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 14px #9b75ff55)}
+#welcome .hero-title span{background:linear-gradient(90deg,#fff2a8,#ffcf62 25%,#ff9bd8 58%,#8cecff 85%,#fff2a8);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+#welcome .welcome-description{color:#e0efff}
+#welcome .welcome-facts span{padding:8px 13px;border:1px solid #7bdcff66;border-radius:99px;background:linear-gradient(110deg,#36caff20,#9d69ff20);color:#eafaff;box-shadow:inset 0 0 14px #5bdcff12,0 0 14px #35baff12}
+#welcome .welcome-facts i{background:#ffda72;box-shadow:0 0 12px #ffda72}
+#welcome .welcome-start{border:1px solid #fff5c8;background:linear-gradient(105deg,#fff1a8 0%,#ffc64d 35%,#ff91c8 72%,#9cecff 100%);box-shadow:0 0 0 5px #ffd76a20,0 10px 35px #d77bff55,0 0 28px #4ddcff66,inset 0 1px 0 #fff}
+#welcome .welcome-start:hover{filter:brightness(1.1);box-shadow:0 0 0 6px #ffd76a28,0 12px 42px #d77bff77,0 0 35px #4ddcff88}
+#welcome .welcome-footnote{color:#b9dfff}
+#welcome .kbc-emblem{border-color:#fff0a8;box-shadow:0 0 0 5px #f5cf6730,0 0 30px #ffd76a88,0 0 55px #45d5ff44}
+@media(max-width:620px){.creator-footer{font-size:12px!important;letter-spacing:.8px}.creator-footer strong{font-size:12px!important}}
 </style>
 </head>
 <body>
@@ -129,7 +147,7 @@ footer{color:#9eb4d6}footer strong{color:#ffe5a0}
 <section class="screen" id="quiz"><div class="exam-top"><span class="pill" id="progress">QUESTION 1 / 21</span><span class="pill">1 point per correct answer</span><span class="pill timer" id="timer">00:15</span></div><div class="live-counts"><span class="count-chip correct-count">✓ सही: <b id="liveCorrect">0</b></span><span class="count-chip wrong-count">✕ गलत: <b id="liveWrong">0</b></span><span class="count-chip skipped-count">↷ छूटे: <b id="liveSkipped">0</b></span></div><div class="track"><span id="progressBar"></span></div><div class="panel"><div class="eyebrow">YOUR QUESTION</div><div class="question-box" id="questionText"></div><div class="options" id="options"></div><div class="feedback" id="feedback" aria-live="polite"></div><div class="nav-wrap"><button class="btn nav-btn" id="backBtn" type="button" disabled>← BACK</button><button class="btn nav-btn" id="pauseBackBtn" type="button" disabled>Ⅱ PAUSE &amp; BACK</button><button class="btn nav-btn" id="returnBtn" type="button" hidden>↩ RETURN TO QUIZ</button><button class="btn nav-btn" id="pauseBtn" type="button">Ⅱ PAUSE</button><button class="btn nav-btn" id="nextBtn" type="button" disabled>NEXT QUESTION&nbsp; →</button></div></div></section>
 <section class="screen" id="result"><div class="panel"><div class="eyebrow">EXAM COMPLETED</div><h2 class="hero-title">YOUR RESULT</h2><div class="result-score" id="scoreText">0 / 21</div><div class="stats"><div class="stat"><strong id="correctCount">0</strong><span>CORRECT</span></div><div class="stat"><strong id="wrongCount">0</strong><span>WRONG</span></div><div class="stat"><strong id="skipCount">0</strong><span>UNANSWERED</span></div></div><p class="result-message" id="resultMessage"></p><button class="btn" id="restartBtn">PLAY AGAIN ↻</button></div></section>
 </main>
-<footer><span style="font-size:6px;opacity:.75">CREATOR: PAWAN SONI</span></footer>
+<footer class="creator-footer">CREATED WITH PRIDE BY <strong>PAWAN SONI</strong></footer>
 <script src="./questions.js"></script>
 <script>
 (()=>{
