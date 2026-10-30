@@ -78,6 +78,31 @@ footer{color:#9eb4d6}footer strong{color:#ffe5a0}
 .nav-wrap{display:flex;justify-content:space-between;gap:14px;margin-top:20px}.nav-btn{min-width:130px}.nav-wrap{flex-wrap:wrap}.btn.paused{background:linear-gradient(180deg,#b8e8ff,#42a9e8);color:#03182b}
 @media(max-width:560px){.school-header{grid-template-columns:58px minmax(0,1fr) 58px;padding:8px 5px;gap:7px}.school-logo{width:56px;height:56px}.school-name .brand{font-size:12px;letter-spacing:.2px}.nav-btn{min-width:0;padding:13px 18px;font-size:13px}}
 
+
+/* KBC-inspired welcome screen: front-page-only visual treatment */
+#welcome{perspective:1000px}
+#welcome .welcome-panel{position:relative;isolation:isolate;overflow:hidden;min-height:500px;padding:clamp(28px,6vw,58px) 22px 34px;border:2px solid #d9b85d;border-radius:28px;background:radial-gradient(ellipse at 50% 0%,#285b91 0,#122e56 38%,#07162f 78%);box-shadow:0 0 0 6px #d9b85d18,0 22px 80px #000b,0 0 55px #2a9ee633,inset 0 0 45px #3da9ff13}
+#welcome .welcome-panel:before{content:"";position:absolute;inset:10px;border:1px solid #f4d88970;border-radius:20px;pointer-events:none;z-index:-1}
+#welcome .welcome-panel:after{content:"";position:absolute;inset:-35%;z-index:-2;pointer-events:none;background:repeating-conic-gradient(from 0deg at 50% 50%,#ffd76a0a 0deg 7deg,transparent 7deg 18deg);animation:welcomeRays 55s linear infinite}
+@keyframes welcomeRays{to{transform:rotate(360deg)}}
+#welcome .kbc-emblem{width:92px;height:92px;margin:0 auto 18px;border:3px solid #ffe49a;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 25%,#3274a9,#071a39 72%);box-shadow:0 0 0 5px #f5cf6730,0 0 30px #ffd76a55,inset 0 0 15px #fff3}
+#welcome .kbc-emblem span{font-size:23px;font-weight:950;color:#fff2bd;line-height:1.1}
+#welcome .kbc-emblem strong{font-size:13px;letter-spacing:3px;color:#7edaff}
+#welcome .welcome-kicker{color:#ffe18a;font-size:clamp(11px,2vw,14px);font-weight:900;letter-spacing:2.5px;margin:0 0 12px}
+#welcome .welcome-label{display:inline-block;padding:7px 18px;border:1px solid #f4d88988;border-radius:99px;color:#d7eaff;background:#ffffff0b;font-size:12px;font-weight:800;letter-spacing:1px}
+#welcome .hero-title{margin:20px 0 12px;font-size:clamp(29px,6vw,54px);line-height:1.25;color:#fff4cb;text-shadow:0 2px 0 #8b5c19,0 0 22px #ffd76a66}
+#welcome .hero-title span{display:inline-block;margin-top:5px;color:#fff;background:linear-gradient(90deg,#fff4cf,#ffd76a,#fff4cf);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+#welcome .welcome-description{max-width:600px;margin:0 auto 22px;color:#d9e9ff;font-size:clamp(14px,2.2vw,17px);line-height:1.8}
+#welcome .welcome-facts{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px 16px;margin:0 auto 27px;color:#ffe7a5;font-size:13px;font-weight:800}
+#welcome .welcome-facts i{width:5px;height:5px;border-radius:50%;background:#64d7ff;box-shadow:0 0 10px #64d7ff}
+#welcome .welcome-start{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-width:min(310px,90%);padding:16px 27px;border:1px solid #fff0b8;background:linear-gradient(110deg,#fff0b4,#f4c34f 48%,#d89425);box-shadow:0 0 0 5px #ffd76a20,0 10px 35px #e9ad3670;color:#1b2440;font-size:17px}
+#welcome .welcome-start b{font-size:22px;transition:transform .2s}
+#welcome .welcome-start:hover b{transform:translateX(5px)}
+#welcome .welcome-footnote{margin-top:20px;color:#a9c5e8;font-size:12px;letter-spacing:.5px}
+#welcome .welcome-orbit{position:absolute;width:240px;height:240px;border:1px solid #6ccfff22;border-radius:50%;pointer-events:none;z-index:-1}
+#welcome .orbit-one{top:-150px;left:-120px;box-shadow:0 0 0 22px #6ccfff08,0 0 0 45px #6ccfff06}
+#welcome .orbit-two{right:-150px;bottom:-160px;box-shadow:0 0 0 22px #ffd76a08,0 0 0 45px #ffd76a05}
+@media(max-width:620px){#welcome .welcome-panel{min-height:0;padding:30px 16px 26px}#welcome .kbc-emblem{width:78px;height:78px}#welcome .welcome-kicker{letter-spacing:1.4px}#welcome .welcome-facts{gap:8px 10px;font-size:11px}#welcome .welcome-facts i{width:4px;height:4px}}
 </style>
 </head>
 <body>
@@ -89,7 +114,18 @@ footer{color:#9eb4d6}footer strong{color:#ffe5a0}
 <audio id="holdAudio" src="./assets/write%20answer%20to%20press%20next%20button%20time.mp3" preload="auto" loop></audio>
 <header class="school-header"><img class="school-logo left-logo" src="./assets/school-logo.jpg" alt="सरस्वती शिशु मंदिर विद्यालय का लोगो"><div class="school-name"><div class="brand">सरस्वती शिशु मंदिर उ. मा. विद्यालय सोहागपुर</div></div><img class="school-logo right-logo" src="./assets/saraswati-logo.jpg" alt="माँ सरस्वती का प्रतीक"></header>
 <main>
-<section class="screen active" id="welcome"><div class="panel"><h1 class="hero-title" id="examTitle">संत रैदास<br>प्रश्नोत्तर प्रतियोगिता 2026</h1><button class="btn" id="startBtn">NEXT&nbsp; →</button></div></section>
+<section class="screen active" id="welcome">
+<div class="panel welcome-panel">
+  <div class="welcome-orbit orbit-one"></div><div class="welcome-orbit orbit-two"></div>
+  <div class="kbc-emblem"><span>ज्ञान</span><strong>2026</strong></div>
+  <div class="welcome-kicker">✦ ज्ञान • आत्मविश्वास • सफलता ✦</div>
+  <div class="welcome-label">विशेष प्रश्नोत्तर प्रतियोगिता</div>
+  <h1 class="hero-title" id="examTitle">संत रैदास<br><span>प्रश्नोत्तर प्रतियोगिता 2026</span></h1>
+  <p class="welcome-description">अपनी जानकारी परखिए, हर प्रश्न का सही उत्तर चुनिए और बनिए ज्ञान के सितारे!</p>
+  <div class="welcome-facts"><span>10 प्रश्न</span><i></i><span>15 सेकंड प्रति प्रश्न</span><i></i><span>हर सही उत्तर पर 1 अंक</span></div>
+  <button class="btn welcome-start" id="startBtn"><span>प्रतियोगिता शुरू करें</span><b>➜</b></button>
+  <div class="welcome-footnote">शुभकामनाएँ! अपना सर्वश्रेष्ठ प्रदर्शन दीजिए।</div>
+</div></section>
 <section class="screen" id="quiz"><div class="exam-top"><span class="pill" id="progress">QUESTION 1 / 10</span><span class="pill">1 point per correct answer</span><span class="pill timer" id="timer">00:15</span></div><div class="track"><span id="progressBar"></span></div><div class="panel"><div class="eyebrow">YOUR QUESTION</div><div class="question-box" id="questionText"></div><div class="options" id="options"></div><div class="feedback" id="feedback" aria-live="polite"></div><div class="nav-wrap"><button class="btn nav-btn" id="backBtn" type="button" disabled>← BACK</button><button class="btn nav-btn" id="pauseBtn" type="button">Ⅱ PAUSE</button><button class="btn nav-btn" id="nextBtn" type="button" disabled>NEXT QUESTION&nbsp; →</button></div></div></section>
 <section class="screen" id="result"><div class="panel"><div class="eyebrow">EXAM COMPLETED</div><h2 class="hero-title">YOUR RESULT</h2><div class="result-score" id="scoreText">0 / 10</div><div class="stats"><div class="stat"><strong id="correctCount">0</strong><span>CORRECT</span></div><div class="stat"><strong id="wrongCount">0</strong><span>WRONG</span></div><div class="stat"><strong id="skipCount">0</strong><span>UNANSWERED</span></div></div><p class="result-message" id="resultMessage"></p><button class="btn" id="restartBtn">PLAY AGAIN ↻</button></div></section>
 </main>
