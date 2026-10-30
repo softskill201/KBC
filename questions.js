@@ -1,14 +1,14 @@
 // Edit this file to change the exam questions.
 // answer is the correct option index: 0 = A, 1 = B, 2 = C, 3 = D.
 window.EXAM_QUESTIONS = [
-{question:"Which gas is primarily responsible for global warming?",options:["Oxygen","Carbon dioxide","Nitrogen","Hydrogen"],answer:1},
-{question:"Which of these is a renewable source of energy?",options:["Coal","Petroleum","Solar energy","Natural gas"],answer:2},
-{question:"What is the main function of the ozone layer?",options:["To produce oxygen","To absorb harmful ultraviolet rays","To cause rainfall","To increase soil fertility"],answer:1},
-{question:"Which action helps conserve water?",options:["Leaving taps open","Fixing leaking taps","Washing roads daily","Burning waste"],answer:1},
-{question:"Which of the following is biodegradable?",options:["Plastic bottle","Glass","Vegetable peels","Aluminium can"],answer:2},
-{question:"The 3Rs of waste management stand for:",options:["Read, Write, Repeat","Reduce, Reuse, Recycle","Run, Rest, Recover","Remove, Replace, Return"],answer:1},
-{question:"Which part of a plant absorbs water from the soil?",options:["Flower","Leaf","Root","Fruit"],answer:2},
-{question:"Deforestation means:",options:["Planting more trees","Cutting down forests","Cleaning rivers","Saving wildlife"],answer:1},
-{question:"Which of these is a major source of air pollution in cities?",options:["Vehicle exhaust","Rainwater","Solar panels","Windmills"],answer:0},
-{question:"What is the best way to protect biodiversity?",options:["Destroy habitats","Hunt endangered species","Protect natural habitats","Pollute rivers"],answer:2}
+{question:"संत रैदास के पिता का नाम क्या था?",options:["राघवदास","मध्यवदास","मूलकदास","शिवदास"],answer:0},
+{question:"संत रैदास की माँ का नाम क्या था?",options:["रूपवती","दुर्गावती","चंद्रवती","कर्मावती"],answer:3},
+{question:"संत रैदास का जन्म किस दिन हुआ था?",options:["रविवार","सोमवार","बुधवार","मंगलवार"],answer:0},
+{question:"गुरुकुल की प्रवेश परीक्षा में रैदास जी से परीक्षक ने कौन-सा प्रश्न पूछा?",options:["एक और एक कितने होते हैं?","दो और दो कितने होते हैं?","एक और एक बीस होते हैं","इनमें से कोई नहीं"],answer:0},
+{question:"संत रैदास के गुरु कौन थे?",options:["ज्ञानंद","रामानंद","प्रेमचंद","ज्ञानेन्द्र"],answer:1},
+{question:"चमड़ा काटने के औजार को क्या बोलते हैं?",options:["कुल्हारी","सुतारी","आरी","रापी"],answer:3},
+{question:"संत रैदास जी ने गंगा में किस भगवान की पत्थर की मूर्ति को तैराया था?",options:["शालिग्राम","रामदास","गोविंद दास","मोहनदास"],answer:0},
+{question:"संत रविदास जी की समाधि कौन-से किले में है?",options:["लाल किला","चित्तौड़ का किला","आगरा का किला","मण्डपगढ़ का किला"],answer:1},
+{question:"कार्तिक माह की पूर्णिमा कौन-सी पूर्णिमा कहलाती है?",options:["कन्या कुमारी","ब्रह्मचारी","त्रिपुरारी","सरस्वती"],answer:2},
+{question:"गुरु रामानंद जी की रविदास जी से भेंट कहाँ हुई थी?",options:["मथुरा","काशी","हरिद्वार","प्रयागराज"],answer:1}
 ];
