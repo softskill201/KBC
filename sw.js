@@ -1,4 +1,4 @@
-const CACHE_NAME="namami-kbc-v21";
+const CACHE_NAME="namami-kbc-v22";
 const APP_FILES=["./","./index.html","./questions.js","./manifest.webmanifest","./assets/school-logo.jpg","./assets/saraswati-logo.jpg","./assets/after%20press%20start%20button%20sound.mp3","./assets/start%20button%20press%20to%20options%20end%20sound.mp3","./assets/time%20sound%20to%20answer%20show%20sound.mp3","./assets/answer%20sound.mp3","./assets/next%20button%20press%20sound.mp3","./assets/write%20answer%20to%20press%20next%20button%20time.mp3"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(APP_FILES)));self.skipWaiting()});
 self.addEventListener("activate",event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE_NAME).map(key=>caches.delete(key)))));self.clients.claim()});
